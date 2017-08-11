@@ -1,0 +1,78 @@
+LIVE Inning Top 1 0-0
+Miami Marlins Adam Conley (L)
+Washington Nationals Gio Gonzalez (L)
+TEAM,RUNLINE,MONEYLINE,TOTAL
+MIA,+1½ (-125),+175,8½ (-125)o
+WAS,-1½ (-110),-245,8½ (-110)u
++24 BETS GAME LINES MLB Sport Category
+
+LIVEInning Top 10-0New York YankeesMasahiro Tanaka (R)Toronto Blue JaysNick Tepesch (R)
+TEAM,RUNLINE,MONEYLINE,TOTAL
+NYY,-1½ (-125),-210,9½ (EVEN)o
+TOR,+1½ (-110),+150,9½ (-140)u
++24 BETS GAME LINES MLB Sport Category
+
+WED 7:10pBoston Red SoxRick Porcello (R)Tampa Bay RaysJake Odorizzi (R)
+TEAM,RUNLINE,MONEYLINE,TOTAL
+BOS,-1½ (+140),-116,8½ (-120)o
+TB,+1½ (-160),-104,8½ (EVEN)u
++35 BETS GAME LINES MLB Sport Category
+
+American League.
+WED 7:10pPittsburgh PiratesIvan Nova (R)Detroit TigersJustin Verlander (R)
+TEAM,RUNLINE,MONEYLINE,TOTAL
+PIT,+1½ (-200),-107,9 (EVEN)o
+DET,-1½ (+170),-113,9 (-120)u
++27 BETS GAME LINES MLB Sport Category
+
+INTERLEAGUE.
+LIVEInning Top 10-0San Diego PadresTravis Wood (L)Cincinnati RedsAsher Wojciechowski (R)
+TEAM,RUNLINE,MONEYLINE,TOTAL
+SD,+1½ (-200),+105,8½ (-140)o
+CIN,-1½ (+145),-140,8½ (EVEN)u
++24 BETS GAME LINES MLB Sport Category
+
+WED 7:35p
+Coming soonPhiladelphia PhilliesJerad Eickhoff (R)Atlanta BravesSean Newcomb (L)
+TEAM,RUNLINE,MONEYLINE,TOTAL
+PHI
+AT,(-150)L
++1½ ,+135,1½ (+130)
+-15,9 (-110)o,
+9 (-,10)u
++29 BETS GAME LINES MLB Sport Category
+
+National League.
+WED 8:10p
+Coming soonHouston AstrosCollin McHugh (R)Chicago White SoxMiguel Gonzalez (R)
+TEAM,RUNLINE,MONEYLINE,TOTAL
+HOU,-1½ (-145),-230,10 (-120)o
+CWS,+1½ (+125),+195,10 (EVEN)u
++30 BETS GAME LINES MLB Sport Category
+
+American League.
+WED 8:10p
+Coming soonMinnesota TwinsBartolo Colon (R)Milwaukee BrewersBrandon Woodruff (R)
+TEAM,RUNLINE,MONEYLINE,TOTAL
+MIN,+1½ (-145),+137,9½ (-110)o
+MIL,-1½ (+125),-157,9½ (-110)u
++28 BETS GAME LINES MLB Sport Category
+
+INTERLEAGUE
+WED 8:15p
+Coming soonKansas City RoyalsTrevor Cahill (R)St. Louis CardinalsMike Leake (R)
+TEAM,RUNLINE,MONEYLINE,TOTAL
+KC
+ST,(-165)L
++1½ ,+120,1½ (+145)
+-14,8½ (-105)o,
+8½ (,115)u
++29 BETS GAME LINES MLB Sport Category
+
+INTERLEAGUE.
+WED 9:40p
+Coming soonLos Angeles DodgersAlex Wood (L)Arizona DiamondbacksZack Greinke (R)
+TEAM,RUNLINE,MONEYLINE,TOTAL
+LAD,-1½ (+140),-119,8½ (-125)o
+ARI,+1½ (-160),-101,8½ (+105)u
++ GAME LINES MLB Sport Category
