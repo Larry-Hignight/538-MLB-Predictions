@@ -68,4 +68,4 @@ for (f in list.files()) {
   #  write.csv(df, file = str_c("../csv/", str_extract(f, ".*predictions"), ".csv"), row.names = F)
 }
 
-write.csv(acc, file = "538-predictions.csv", row.names = F)
+write.csv(acc, file = "../parsed-data/538-predictions.csv", row.names = F)

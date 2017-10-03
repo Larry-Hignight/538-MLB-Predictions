@@ -23,7 +23,7 @@ extract_lines <- function(x, operator) {
 
 ## -- Parse the Oddsshark files -- ##
 
-setwd('/home/larry/Github-Public/538-MLB-Predictions/odds2/')
+setwd('/home/larry/Github-Public/538-MLB-Predictions/oddsshark/')
 acc <- data.frame()
 for (f in list.files()) {
   print(sprintf("Processing file: %s", f))
@@ -54,4 +54,4 @@ for (f in list.files()) {
   acc <- rbind(acc, df)
 }
 
-write.csv(acc, file = "../oddsshark-money-lines.csv", row.names = F)
+write.csv(acc, file = "../parsed-data/oddsshark-money-lines.csv", row.names = F)
