@@ -63,9 +63,7 @@ for (f in list.files()) {
 
   ## Merge with the accumulator
   acc <- rbind(acc, df)
-  
-  ## Write the the individual file to disk
-  #  write.csv(df, file = str_c("../csv/", str_extract(f, ".*predictions"), ".csv"), row.names = F)
 }
 
+colnames(acc) <- str_to_title(colnames(acc))
 write.csv(acc, file = "../parsed-data/538-predictions.csv", row.names = F)
