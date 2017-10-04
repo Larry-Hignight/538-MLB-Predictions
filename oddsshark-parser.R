@@ -1,7 +1,7 @@
 library(stringr)
 library(lubridate)
 
-extract_dates <- function(x) {
+extract_game_dates <- function(x) {
   dates <- str_extract_all(x, '"short_date":"[SMTWF][a-z]{2} [A-Z][a-z]{2} [0-9]+"')[[1]]
   dates <- str_sub(dates, start = 19, end = -2)
   mdy(str_c(dates, " ", year(now())))
@@ -36,15 +36,15 @@ for (f in list.files()) {
   games <- sapply(days, function(day) length(extract_teams(day)) / 2)
   names(games) <- 1:length(games)
 
-  dates <- extract_dates(x)
+  dates <- extract_game_dates(x)
   teams <- extract_teams(x)
   operators <- extract_operators(x)
   lines <- sapply(operators, function(op) extract_lines(x, op))
   colnames(lines) <- str_sub(colnames(lines), start = 4)
-  df <- data.frame(date.line = dates[1], date.game = dates[1], team = teams)
+  df <- data.frame(date.line = ymd_hm(f), date.game = dates[1], team = teams)
   df <- cbind(df, lines)
 
-  df$date.game <- dates[unlist(mapply(rep, 1:length(games), games, SIMPLIFY = FALSE))]
+  df$date.game <- dates[unlist(mapply(rep, 1:length(games), 2 * games, SIMPLIFY = FALSE))]
   df$best <- apply(df[ , 5:ncol(df)], 1, function(x) {
     if (all(is.na(x))) NA
     else max(x, na.rm = TRUE)
