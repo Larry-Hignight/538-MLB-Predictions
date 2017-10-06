@@ -13,6 +13,23 @@ Pitcher.H <- as.character(original$Pitcher[seq(2, nrow(original), 2)])
 Score.V <- as.character(original$Final[seq(1, nrow(original), 2)])
 Score.H <- as.character(original$Final[seq(2, nrow(original), 2)])
 
+# Replace these team name abbvs with those used by 538 and Oddsshark
+replace_teams <- function(x) {
+  x[x == 'CUB'] <- 'CHC'
+  x[x == 'CUB'] <- 'CHC'
+  x[x == 'CWS'] <- 'CHW'
+  x[x == 'KAN'] <- 'KC'
+  x[x == 'LOS'] <- 'LAD'
+  x[x == 'SDG'] <- 'SD'
+  x[x == 'SFO'] <- 'SF'
+  x[x == 'TAM'] <- 'TB'
+  x[x == 'WAS'] <- 'WSH'
+  x
+}
+
+Visitor <- replace_teams(Visitor)
+Home <- replace_teams(Home)
+
 x <- data.frame(Date, Visitor, Home, Pitcher.V, Pitcher.H, Score.V, Score.H)
 x <- x[x$Date > ymd("2017-07-31"), ]
-write.csv(x, file = 'game-results-2017.csv', row.names = F)
+write.csv(x, file = '../parsed-data/game-results-2017.csv', row.names = F)
