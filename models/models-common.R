@@ -12,6 +12,45 @@ calc_payout <- function(ml, bet = 100) {
 
 calc_ev <- function(p, ml, bet = 100) (p * (calc_payout(ml, bet) - bet)) + ((1 - p) * -bet)
 
+# Bet Selection Functions
+select_by_ev_cutoff <- function(ev.cutoff, start = 0, randomized = FALSE) {
+  bets <- cbind(lines[lines$EV >= ev.cutoff, ], data.frame(start, bet = NA, won = NA, end = NA))
+  if (randomized) bets[sample(nrow(bets)), ] else bets
+}
+
+# Betting Strategy Functions
+constant_bet <- function(amt) function(bets) amt
+
+percentage_bet <- function(perc, max.bet = Inf) 
+  function(bets) min(bets$start[nrow(bets)] * perc / 100, max.bet)
+
+kelly_bet <- function(max.bet = Inf, kelly.coef = 1) {
+  calc_b = function(ml) calc_payout(ml, 1) - 1
+  kelly_fraction = function(b, p) (p * (b + 1) - 1) / b
+  function(bets) {
+    x <- bets[nrow(bets), ]
+    b <- calc_b(x$Best)
+    bet.amt <- x$start * kelly_fraction(b, x$P) * kelly.coef
+    if (bet.amt < 0) bet.amt <- 0
+    min(bet.amt, max.bet)
+  }
+}
+
+
+# Used to calculate the results for the 'bets' data frame
+# Requires the following columns:  Winner, Best, start, bet, won, end
+# The betting_amount function is one of the betting strategy functions above (eg kelly_betting)
+# The betting_amount function is allowed to access bets from 1:i
+calc_bets <- function(bets, betting_amount) {
+  for (i in 1:nrow(bets)) {
+    if (i > 1) bets$start[i] <- bets$end[i - 1]
+    bet <- betting_amount(bets[1:i, ])
+    bets$bet[i] <- bet
+    bets$won[i] <- ifelse(bets$Winner[i], calc_payout(ml = bets$Best[i], bet), -bet)
+    bets$end[i] <- bets$start[i] + bets$won[i]
+  }
+  bets
+}
 
 
 ## Import the Parsed Data -------------------------------------------------------------------------
